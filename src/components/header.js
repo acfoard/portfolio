@@ -1,49 +1,49 @@
-import React, { Component } from 'react';
-import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBCollapse, MDBContainer,
-MDBHamburgerToggler } from 'mdbreact';
+import React, { Component } from "react";
+import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse, 
+MDBIcon } from "mdbreact";
 
 class Header extends Component {
 state = {
-  collapse1: false,
-  collapseID: ''
-}
+  isOpen: false
+};
 
-toggleCollapse = collapseID => () => {
-  this.setState(prevState => ({ collapseID: (prevState.collapseID !== collapseID ? collapseID : '') }));
-}
-
-toggleSingleCollapse = collapseId => {
-  this.setState({
-    ...this.state,
-    [collapseId]: !this.state[collapseId]
-  });
+toggleCollapse = () => {
+  this.setState({ isOpen: !this.state.isOpen });
 }
 
 render() {
   return (
-    <MDBContainer>
-      <MDBNavbar color="amber lighten-4" style={{ marginTop: '20px' }} light>
-        <MDBContainer>
-          <MDBNavbarBrand className='title'>
-            Andrew Foard
-          </MDBNavbarBrand>
-          <MDBHamburgerToggler color="#d3531a" id="hamburger1" onClick={()=> this.toggleSingleCollapse('collapse1')} />
-            <MDBCollapse isOpen={this.state.collapse1} navbar>
-              <MDBNavbarNav left>
-                <MDBNavItem active>
-                  <MDBNavLink to="#!">About</MDBNavLink>
-                </MDBNavItem>
-                <MDBNavItem>
-                  <MDBNavLink to="#!">Portfolio</MDBNavLink>
-                </MDBNavItem>
-                <MDBNavItem>
-                  <MDBNavLink to="#!">Contact</MDBNavLink>
-                </MDBNavItem>
-              </MDBNavbarNav>
-            </MDBCollapse>
-        </MDBContainer>
-      </MDBNavbar>
-    </MDBContainer>
+    <MDBNavbar color="light-blue darken-3" dark expand="md">
+      <MDBNavbarBrand>
+        <strong className="white-text">Andrew Foard</strong>
+      </MDBNavbarBrand>
+      <MDBNavbarToggler onClick={this.toggleCollapse} />
+      <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
+        <MDBNavbarNav left>
+          <MDBNavItem active>
+            <MDBNavLink to="/about">About</MDBNavLink>
+          </MDBNavItem>
+          <MDBNavItem>
+            <MDBNavLink to="#!">Portfolio</MDBNavLink>
+          </MDBNavItem>
+          <MDBNavItem>
+            <MDBNavLink to="#!">Contact</MDBNavLink>
+          </MDBNavItem>
+        </MDBNavbarNav>
+        <MDBNavbarNav right>
+          <MDBNavItem>
+            <MDBNavLink className="waves-effect waves-light" to="#!">
+            <MDBIcon fab icon="linkedin" />
+            </MDBNavLink>
+          </MDBNavItem>
+          <MDBNavItem>
+            <MDBNavLink className="waves-effect waves-light" to="#!">
+            <MDBIcon fab icon="github" />
+            </MDBNavLink>
+          </MDBNavItem>
+        </MDBNavbarNav>
+      </MDBCollapse>
+    </MDBNavbar>
     );
   }
 }
