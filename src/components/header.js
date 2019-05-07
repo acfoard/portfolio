@@ -24,10 +24,10 @@ render() {
             <MDBNavLink to="/about">About</MDBNavLink>
           </MDBNavItem>
           <MDBNavItem>
-            <MDBNavLink to="#!">Portfolio</MDBNavLink>
+            <MDBNavLink to="/portfolio">Portfolio</MDBNavLink>
           </MDBNavItem>
           <MDBNavItem>
-            <MDBNavLink to="#!">Contact</MDBNavLink>
+            <MDBNavLink to="/contact">Contact</MDBNavLink>
           </MDBNavItem>
         </MDBNavbarNav>
         <MDBNavbarNav right>
