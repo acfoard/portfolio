@@ -27,6 +27,9 @@
   width: auto;
   height: 300px;
 }
+.projectCard {
+  margin: 10px;
+}
 
 @keyframes App-logo-spin {
   from {
