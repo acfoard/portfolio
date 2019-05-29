@@ -23,7 +23,7 @@ const LandingPage = props => {
         </div>
         <div className="landingDiv contactDiv">
           <img src={contact} alt="" class="landingImg" />
-          <Link to={"/portfolio"}>
+          <Link to={"/contact"}>
             <h3>Contact Andrew</h3>
           </Link>
         </div>
