@@ -41,14 +41,26 @@ class Header extends Component {
               </MDBNavItem>
             </MDBNavbarNav>
             <MDBNavbarNav right>
-              <MDBNavItem>
-                <MDBNavLink className="waves-effect waves-light" to="#!">
-                  <MDBIcon fab icon="linkedin" />
+              <MDBNavItem className="headerIcon">
+                <MDBNavLink to="#">
+                  <a
+                    href="https://linkedin.com/in/andrewcfoard"
+                    className="waves-effect waves-light"
+                    target="blank"
+                  >
+                    <MDBIcon fab icon="linkedin" />
+                  </a>
                 </MDBNavLink>
               </MDBNavItem>
-              <MDBNavItem>
-                <MDBNavLink className="waves-effect waves-light" to="#!">
-                  <MDBIcon fab icon="github" />
+              <MDBNavItem className="headerIcon">
+                <MDBNavLink to="#">
+                  <a
+                    href="https://www.github.com/acfoard"
+                    className="waves-effect waves-light"
+                    target="blank"
+                  >
+                    <MDBIcon fab icon="github" />
+                  </a>
                 </MDBNavLink>
               </MDBNavItem>
             </MDBNavbarNav>
