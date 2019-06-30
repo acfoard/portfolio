@@ -67,7 +67,7 @@ class Portfolio extends React.Component {
     return (
       <MDBRow>
         {projectList.map(project => 
-        <MDBCol size="6" >
+        <MDBCol size="8" md="6" >
           <MDBCard style={{ width: 'auto',maxWidth: "25rem" }} className='projectCard'>
             <MDBCardImage className="img-fluid" src={project.image} waves />
             <MDBCardBody>
